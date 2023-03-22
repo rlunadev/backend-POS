@@ -10,17 +10,13 @@ import { CategoriesService } from './categories/categories.service';
 import { UnitsService } from './units/units.service';
 import { UnitsController } from './units/units.controller';
 import { StockController } from './stock/stock.controller';
-import { CategoriesModule } from './categories/categories.module';
-import { OrderDetailsModule } from './order-details/order-details.module';
-import { OrdersModule } from './orders/orders.module';
-import { ProductsModule } from './products/products.module';
-import { StockModule } from './stock/stock.module';
-import { UnitsModule } from './units/units.module';
 import { StockService } from './stock/stock.service';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { Category } from './categories/entities/category.entity';
 
 @Module({
+  // imports: [TypeOrmModule.forFeature([Category])],
   controllers: [OrdersController, OrderDetailsController, ProductsController, CategoriesController, UnitsController, StockController],
   providers: [OrderDetailsService, OrdersService, ProductsService, CategoriesService, UnitsService, StockService],
-  imports: [CategoriesModule, OrderDetailsModule, OrdersModule, ProductsModule, StockModule, UnitsModule]
 })
 export class SellsModule {}
