@@ -16,10 +16,11 @@ import { OrdersModule } from './orders/orders.module';
 import { ProductsModule } from './products/products.module';
 import { StockModule } from './stock/stock.module';
 import { UnitsModule } from './units/units.module';
+import { StockService } from './stock/stock.service';
 
 @Module({
   controllers: [OrdersController, OrderDetailsController, ProductsController, CategoriesController, UnitsController, StockController],
-  providers: [OrderDetailsService, OrdersService, ProductsService, CategoriesService, UnitsService],
+  providers: [OrderDetailsService, OrdersService, ProductsService, CategoriesService, UnitsService, StockService],
   imports: [CategoriesModule, OrderDetailsModule, OrdersModule, ProductsModule, StockModule, UnitsModule]
 })
 export class SellsModule {}

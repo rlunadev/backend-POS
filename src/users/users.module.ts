@@ -3,7 +3,6 @@ import { ProfileController } from './profile/profile.controller';
 import { ProfileService } from './profile/profile.service';
 import { AddressController } from './address/address.controller';
 import { RolesController } from './roles/roles.controller';
-import { UsersModule } from './users/users.module';
 import { RolesModule } from './roles/roles.module';
 import { RoleUserModule } from './role-user/role-user.module';
 import { ProfileModule } from './profile/profile.module';
@@ -20,7 +19,6 @@ import { RolesService } from './roles/roles.service';
 import { RoleUserController } from './role-user/role-user.controller';
 import { PersonaController } from './persona/persona.controller';
 import { UsersController } from './users/users.controller';
-import { RolesController } from './roles/roles.controller';
 
 @Module({
   controllers: [ProfileController, AddressController, RolesController, UsersController, PersonaController, RoleUserController, CustomersController],
