@@ -5,7 +5,7 @@ import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 export class Category extends BaseEntity{
 
     @PrimaryGeneratedColumn('uuid', { name: 'id' })
-    id: number;
+    id: string;
   
     @Column('varchar', {
         length: 50,

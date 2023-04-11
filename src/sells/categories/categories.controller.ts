@@ -14,6 +14,7 @@ export class CategoriesController {
 
   @Get()
   findAll() {
+    return 'ssssssssssss'
     return this.categoriesService.findAll();
   }
 
